@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif; /* phông chữ */
+}
+body {
+    background-image: linear-gradient(to bottom right, #ebdedc, #c17baa, #c2d84a);
+}
+.title {
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 30px;
+    height:100px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    height:50px; /* chiều rộng header */
+    background-color: #333; /* màu nền header */
+    position: sticky;
+    top:0;
+}
+.menu {
+    display: flex; /* element linh hoạt */
+    justify-content: flex-end; /* nội dung element đẩy xuông cuối */
+}
+.menu li {
+    position: relative; /* các element căn vị trí so với vị trí ban đầu */
+}
+.menu>li {
+    display: block; /* các element xếp thành từng hàng */
+}
+@keyframes slide-down {
+    0% {
+        transform: translateY(-20px); /* Vị trí ban đầu */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Vị trí cuối cùng */
+        opacity: 1;
+    }
+}
+.menu .smenu {
+    position: absolute; /* căn vị trí phần tử so với vị trí đầu trang */
+    background-color: white;
+    right: 0; /*căn vị trí sang phải */
+    display:none; /*các element không xuất hiện */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* đổ bóng cho thằng mang .smenu */
+    list-style-type: none; /* làm mất chấm */
+    animation: slide-down 0.5s ease-out forwards;
+}
+.smenu a {
+    color:#333;
+    text-decoration: none; /*làm mất cái trang trí trên element */
+    line-height: 40px; /* độ rộng của dòng */
+    display: block;
+    padding: 0 20px; /* đệm */
+    white-space: nowrap; /* không gian cách không đổi */
+}
+.menu > li > a {
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 20px;
+    display: block;
+}
+@keyframes move-text{
+from{
+    transform: translateX(0);
+}
+to{
+    transform: translateX(10px);
+}
+}
+.smenu li:hover a {
+    background-color: rgba(0, 0, 0, 0);
+    animation-name: move-text;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+.menu>li:hover>a {
+    background-color: #ccc;
+    color: #333;
+}
+.menu > li:hover .smenu {
+    display: block;
+}
+.content {
+    display:block;
+    
+}
+.hcontent {
+    height:150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 50px;
+}
+.mcontent{ 
+    margin: 0 3%;
+    height: auto;
+    border-radius: 10px;
+    background: repeating-linear-gradient(to bottom, #f0f0f0, #f0f0f0 1px, transparent 1px, transparent 20px);
+    background-color: #fdfdfd;
+    display:inline-block;
+
+}
+#pica {
+    margin: 3% 3% 0 1%;
+    float: right;
+    width:30%;
+    border-radius: 20px;
+}
+#ctdiva {
+    font-family: "M PLUS Rounded 1c", serif;
+    font-weight: 400;
+    font-size:40px;
+    margin-top:30px;
+    font-style: normal;
+    height:80px;
+    text-align:center
+}
+#ctdivb {
+    text-indent: 30px;
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size:30px;
+}
+#ctp {
+    font-family: "Twinkle Star", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    text-indent: 20px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+}
+#picb {
+    margin: 0 1% 0 3%;
+    float: left;
+    height: 300px;
+    border-radius: 20px;
+}
+#ctdivc {
+    text-indent: 10px;
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size:30px;
+}
+#ctpa {
+    font-family: "Twinkle Star", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    text-indent: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+#picc {
+    margin: 0 3% 0 1%;
+    float: right;
+    width:30%;
+    border-radius: 20px;
+}
+#ctdivd {
+    text-indent: 30px;
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size:30px;
+}
+#ctpb {
+    font-family: "Twinkle Star", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    text-indent: 20px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+}
+#picd {
+    margin: 0 1% 0 3%;
+    float: left;
+    width:30%;
+    border-radius: 20px;
+    height: 330px;
+}
+#ctdive {
+    font-family: "M PLUS Rounded 1c", serif;
+    font-weight: 400;
+    font-size:40px;
+    font-style: normal;
+    height:70px;
+    text-align:center
+}
+#ctdivf {
+    text-indent: 10px;
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size:30px;
+}
+.ctpc {
+    font-family: "Twinkle Star", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    text-indent: 20px;
+    margin-right: 20px;
+}
+#lastctpc {
+    margin-bottom: 70px;
+}
+#pice {
+    margin: 0 3% 0 1%;
+    float: right;
+    width:30%;
+    border-radius: 20px;
+    height: 300px;
+}
+#ctdivg {
+    text-indent: 30px;
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size:30px;
+}
+.ctpd {
+    font-family: "Twinkle Star", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    text-indent: 20px;
+    margin-left: 20px;
+}
+#lastctpd {
+    margin-bottom: 70px;
+}
+#picf {
+    margin: 0 1% 3% 3%;
+    float: left;
+    width:30%;
+    border-radius: 20px;
+    height: 330px;
+}
+#ctdivh {
+    text-indent: 10px;
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size:30px;
+}
+.ctpe {
+    font-family: "Twinkle Star", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    text-indent: 20px;
+    margin-right: 20px;
+}
+footer {
+    margin-top: 30px;
+    text-align:center
+}
+/* adding */
+        /* Phần nội dung */
+        .content1 {
+            padding: 20px;
+            background-color: #fff;
+            margin: 3% 3%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Phần bình luận */
+        .comment-section {
+            margin-top: 30px;
+        }
+
+        .comment-box {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .comment-box input, .comment-box textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .comment-box textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .comment-box button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .comment-box button:hover {
+            background-color: #45a049;
+        }
+
+        /* Danh sách bình luận */
+        .comments-list {
+            margin-top: 30px;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment .author {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .comment .message {
+            font-size: 14px;
+            color: #555;
+        }
